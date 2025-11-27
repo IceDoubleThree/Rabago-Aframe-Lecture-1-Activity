@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aframe Experience</title>
+    <script src="https://aframe.io/releases/1.4.2/aframe.min.js"></script>
+</head>
+<body>
+    <!-- Aframe Lecture 1-->
+    <a-scene>
+            <a-assets>
+            <img id="L10-img-BG" src="/08/assets/L10-img-background.jpg">
+        </a-assets>
+
+        <a-image 
+            src="#L10-img-BG" 
+            position="0 1.6 -11" 
+            scale="12 9 1">
+        </a-image>
+
+        <a-box 
+            color="red"
+            height="1.5"
+            position="-1 0.5 -4">
+        </a-box>
+
+        <a-entity 
+            geometry="primitive: box; height: 1.5" 
+            material="shader: standard; color: #AA0000" 
+            position="1 0.5 -4">
+        </a-entity>
+
+        <a-entity 
+            geometry="primitive: cylinder; 
+                    theta-length: 90; 
+                    theta-start: 135; 
+                    radius: 0.707; 
+                    height: 0.833; 
+                    open-ended: true" 
+            material="shader: flat; 
+                    color: #FFFFFF; side: 
+                    double; 
+                    src: #L10-img-BG" 
+            position="0 1.5 0" 
+            scale="-10 10 10">
+        </a-entity>
+    </a-scene>
+</body>
+</html>
+
+
+<!-- L1-5 -->
+    <!-- <a-box
+    width="4"
+    height="2"
+    depth="0.2"
+    color="green"
+    position="0 1 -7"
+    rotation="90 0 0"
+    scale="-1 1 2"
+    side="double">
+        <a-circle 
+        color="#333333" 
+        side="double" 
+        position="2 0 0"
+        rotation="90 0 0"
+        >
+        </a-circle>
+    </a-box>
+
+    <a-circle 
+    color="#FFC107" 
+    side="double" 
+    position="-2 1 -8"
+    scale="2 2 1">
+    </a-circle>
+
+    <a-cylinder 
+    color="#616161"
+    height="2"
+    radius="2"
+    segments-radial="6"
+    open-ended="true"
+    side="double"
+    position="0 1 0"
+    rotation="0 -90 90"
+    scale="2 2 2">
+</a-cylinder> 
+-->
+
+<!-- L6 -->
+<!--
+    <a-assets>
+        <img id="metal" src="/06-IMGs/rusty_metal_grid_diff_4k.jpg">
+        <img id="metal-NRM" src="/06-IMGs/rusty_metal_grid_disp_4k.png">
+        <img id="brick" src="/06-IMGs/broken_brick_wall_diff_4k.jpg">
+        <img id="brick-NRM" src="/06-IMGs/broken_brick_wall_disp_4k.png">
+    </a-assets>
+
+    <a-box 
+        color="#FFFFFF"
+        src="#metal"
+        normal-map="#metal-NRM"
+        normal-scale="-1 1"
+        roughness="0.5"
+        width="4" height="4" depth="4"
+        position="-2.001 1.5 -9"
+        scale="-1 1 1"
+        side="double">
+    </a-box>
+    <a-box material="color: #FFFFFF;
+                    src: #brick;
+                    repeat: 2 2;
+                    normal-map: #brick-NRM;
+                    normal-texture-repeat: 2 2;
+                    normal-scale: 1 -1;
+                    roughness: 0.9"
+        width="4" height="4" depth="4"
+        position="2 1.5 -9"
+        scale="-1 1 1"
+        side="double">
+    </a-box>
+
+    <a-sphere material="color: #0000AA; roughness: 0.2; shader: standard"
+        radius="0.5"
+        position="-2 1.5 -8">
+    </a-sphere>
+
+    <a-sphere material="color: #AA0000;
+                roughness: 0.2;
+                shader: flat;
+                opacity: 0.5"
+        radius="0.5"
+        position="2 1.5 -8">
+    </a-sphere> 
+-->
+
+<!-- L7 -->
+<!--
+    <a-assets>
+        <img id="L09-img-01" src="07/assets/L09-img-1024x768-flat.jpg">
+        <img id="L09-img-02" src="07/assets/L09-img-1024x768-curved.jpg">
+        <img id="L09-img-03" src="07/assets/L09-img-1024x768-curved-layout-R.jpg">
+        <img id="L09-img-04" src="07/assets/L09-img-1024x768-curved-layout-C.jpg">
+        <img id="L09-img-05" src="07/assets/L09-img-1024x768-curved-layout-L.jpg">
+    </a-assets>
+
+    <a-image
+        src="#L09-img-01"
+        position="0 1.5 -3"
+        width="1"
+        height="0.75"
+        scale="3 3 1">
+    </a-image>
+
+    <a-curvedimage 
+        src="#L09-img-02"
+        theta-length="90"
+        theta-start="135"
+        radius="0.707"
+        height="0.833"
+        position="0 1.5 0"
+        >
+    </a-curvedimage>
+
+    <a-box
+        color="#AA0000"
+        opacity="0.5"
+        width="3"
+        height="0.1"
+        depth="3"
+        position="0 1.5 -1.5">
+    </a-box>
+
+    <a-curvedimage src="#L09-img-03"
+        theta-length="50"
+        theta-start="90"
+        radius="0.5"
+        height="0.327"
+        position="0 1.5 0"
+        scale="3 3 3">
+    </a-curvedimage>
+
+    <a-curvedimage src="#L09-img-04"
+        theta-length="50"
+        theta-start="155"
+        radius="0.5"
+        height="0.327"
+        position="0 1.5 0"
+        scale="3 3 3">
+    </a-curvedimage>
+
+    <a-curvedimage src="#L09-img-05"
+        theta-length="50"
+        theta-start="220"
+        radius="0.5"
+        height="0.327"
+        position="0 1.5 0"
+        scale="3 3 3">
+    </a-curvedimage>
+-->
+
+<!-- L8 -->
+<!-- 
+    <a-assets>
+        <img id="L10-img-BG" src="/08/assets/L10-img-background.jpg">
+    </a-assets>
+
+    <a-image 
+        src="#L10-img-BG" 
+        position="0 1.6 -11" 
+        scale="12 9 1">
+    </a-image>
+
+    <a-box 
+        color="red"
+        height="1.5"
+        position="-1 0.5 -4">
+    </a-box>
+
+    <a-entity 
+        geometry="primitive: box; height: 1.5" 
+        material="shader: standard; color: #AA0000" 
+        position="1 0.5 -4">
+    </a-entity>
+
+    <a-entity 
+        geometry="primitive: cylinder; 
+                theta-length: 90; 
+                theta-start: 135; 
+                radius: 0.707; 
+                height: 0.833; 
+                open-ended: true" 
+        material="shader: flat; 
+                color: #FFFFFF; side: 
+                double; 
+                src: #L10-img-BG" 
+        position="0 1.5 0" 
+        scale="-10 10 10">
+    </a-entity>
+-->
